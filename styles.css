@@ -34,6 +34,8 @@ html, body {
   align-items: center;
   border: 0.1rem solid black;
   font-size: 1.4rem;
+  transform: scale(1.0);
+  transition: transform 0.5s linear;
 }
 
 .grid div[data='1'] {
@@ -72,8 +74,21 @@ html, body {
 
 .clickedBomb {
   background: red;
+  animation: grow-shrink 1s linear forwards;
 }
 
 .checked {
   background-color: white;
+}
+
+@keyframes grow-shrink {
+  0% {
+    transform: scale(1.0);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1.0);
+  }
 }
