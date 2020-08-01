@@ -24,12 +24,16 @@ h1 {
   width: 40rem;
   display: flex;
   flex-wrap: wrap;
-  background-color: #eee;
+  background-color: #ddd;
 }
 
 .grid div {
   height: 4rem;
   width: 4rem;
+}
+
+.bomb {
+  background-color: orange;
 }
 
 @media screen and (min-width: 64em) {
