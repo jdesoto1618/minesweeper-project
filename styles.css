@@ -23,6 +23,7 @@ html, body {
   flex-wrap: wrap;
   background-color: #ddd;
   margin: 12.5rem auto 0 auto;
+  outline: 0.5rem solid #aaa;
 }
 
 .grid div {
@@ -61,12 +62,16 @@ html, body {
   color: green;
 }
 
-.bomb {
+/* .bomb {
   background-color: orange;
-}
+} */
 
 .allBombs {
   background: linear-gradient(orange, #f23532);
+}
+
+.clickedBomb {
+  background: red;
 }
 
 .checked {
