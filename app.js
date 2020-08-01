@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let flags = 0;
   let squares = [];
   let isGameOver = false;
+  let numberOfValidSquaresChecked = document.querySelectorAll('.checked');
 
   function createBoard() {
     let i;
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       square.addEventListener('click', () => {
         click(square);
+        checkForWin();
       });
 
       square.oncontextmenu = (e) => {
@@ -146,8 +148,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function checkForWin() {
+    if (isGameOver) return
     let i;
     let matches = 0;
+    const squaresWithoutBombs = (width * width) - numberOfBombs;
     for (i = 0; i < squares.length; i++) {
       if (squares[i].classList.contains('flag') && squares[i].classList.contains('bomb')) {
         matches++;
@@ -157,5 +161,14 @@ document.addEventListener('DOMContentLoaded', () => {
       alert('You won!!!');
       isGameOver = true;
     }
+    if (getNumberOfCheckedSquares() === squaresWithoutBombs) {
+      alert('You found all valid squares!');
+      isGameOver = true;
+    }
+  }
+
+  function getNumberOfCheckedSquares() {
+    numberOfValidSquaresChecked = document.querySelectorAll('.checked');
+    return numberOfValidSquaresChecked.length;
   }
 });

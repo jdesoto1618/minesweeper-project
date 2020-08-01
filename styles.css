@@ -68,9 +68,3 @@ html, body {
 .checked {
   background-color: white;
 }
-
-@media screen and (min-width: 64em) {
-  h1 {
-    font-size: 3rem;
-  }
-}
