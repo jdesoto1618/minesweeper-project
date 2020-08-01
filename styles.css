@@ -25,11 +25,20 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   background-color: #ddd;
+  margin: 7.5rem auto 0 auto;
 }
 
 .grid div {
   height: 4rem;
   width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.1rem solid black;
+}
+
+.grid div[data='1'] {
+
 }
 
 .bomb {
