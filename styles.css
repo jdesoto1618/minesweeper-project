@@ -2,7 +2,8 @@ html, body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 62.5%;
+  font-size: 62.5%;
+  font-family: 'Rowdies', cursive;
 }
 
 *,
@@ -15,30 +16,49 @@ html, body {
   text-align: center;
 }
 
-h1 {
-  font-size: 2.5rem;
-}
-
 .grid {
-  height: 40rem;
-  width: 40rem;
+  height: 50rem;
+  width: 50rem;
   display: flex;
   flex-wrap: wrap;
   background-color: #ddd;
-  margin: 7.5rem auto 0 auto;
+  margin: 12.5rem auto 0 auto;
 }
 
 .grid div {
-  height: 4rem;
-  width: 4rem;
+  height: 5rem;
+  width: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 0.1rem solid black;
+  font-size: 1.4rem;
 }
 
 .grid div[data='1'] {
+  color: #35e2c3;
+}
 
+.grid div[data='2'] {
+  color: dodgerblue;
+}
+
+.grid div[data='3'] {
+  color: #86b3d4;
+}
+
+.grid div[data='4'] {
+  color: orange;
+}
+
+.grid div[data='5'] {
+  color: #f23532;
+}
+.grid div[data='6'] {
+  color: #ab005a;
+}
+.grid div[data='7'] {
+  color: green;
 }
 
 .bomb {
@@ -46,7 +66,7 @@ h1 {
 }
 
 .checked {
-  background-color: red;
+  background-color: white;
 }
 
 @media screen and (min-width: 64em) {
