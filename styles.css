@@ -36,6 +36,10 @@ h1 {
   background-color: orange;
 }
 
+.checked {
+  background-color: red;
+}
+
 @media screen and (min-width: 64em) {
   h1 {
     font-size: 3rem;
