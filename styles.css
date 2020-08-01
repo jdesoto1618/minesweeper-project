@@ -65,6 +65,10 @@ html, body {
   background-color: orange;
 }
 
+.allBombs {
+  background: linear-gradient(orange, #f23532);
+}
+
 .checked {
   background-color: white;
 }

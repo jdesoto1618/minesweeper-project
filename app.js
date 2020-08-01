@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
       grid.appendChild(square);
       squares.push(square);
 
+
       square.addEventListener('click', () => {
         click(square);
         checkForWin();
@@ -71,8 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
         square.innerHTML = '';
         flags--;
       }
-      console.log(flags);
-      
     }
   }
 
@@ -143,11 +142,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 10)
   }
 
-  function gameOver(square) {
+  function gameOver() {
     console.log('BOOOOOM');
     squares.forEach(square => {
       if (square.classList.contains('bomb')) {
         square.innerHTML = '💣';
+        square.classList.remove('bomb')
+        square.classList.add('allBombs')
       }
     })
     isGameOver = true;
