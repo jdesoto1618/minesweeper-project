@@ -1,1 +1,1 @@
-# minesweeper-project
+# Minesweeper Created With JavaScript
